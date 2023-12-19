@@ -1,9 +1,13 @@
-import React from 'react'
+import {React, useState } from 'react';
+import {Route, Routes } from 'react-router-dom';
+import { NavBar, Feed, PinDetail, CreatePin, Search } from '../components'
 
 const Pins = () => {
+  const [searchTerm, setSearchTerm] = useState('')
+
   return (
-    <div>
-      Pins
+    <div className='px-2 md:px-5'>
+
     </div>
   )
 }
