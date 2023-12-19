@@ -1,8 +1,17 @@
+import { Routes, Route, useNavigate} from 'react-router-dom';
+import React from 'react';
+import Login from './components/Login';
+import Home from './container/Home';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <GoogleOAuthProvider clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}>
+      <Routes>
+        <Route path='login' element={<Login />} />
+        <Route path='/*' element={<Home />} />
+      </Routes>
+    </GoogleOAuthProvider>
   );
 }
 
