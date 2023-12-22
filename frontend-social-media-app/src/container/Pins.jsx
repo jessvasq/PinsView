@@ -8,7 +8,7 @@ import PinDetail from '../components/PinDetail';
 import CreatePin from '../components/CreatePin';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-const Pins = ({user}) => {
+const Pins = ({ user }) => {
   const [searchTerm, setSearchTerm] = useState('')
 
   return (
@@ -20,7 +20,6 @@ const Pins = ({user}) => {
 
       <div className='h-full'> 
         <Routes>
-        <Route path='/' element={<Pins user={user && user} />} />
           <Route path='/' element={<Feed />}/>
           <Route path='/category/:categoryId' element={<Feed />}/>
           <Route path='/pin-detail/:pinId' element={<PinDetail user={user && user} />}/>
