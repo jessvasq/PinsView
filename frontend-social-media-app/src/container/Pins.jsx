@@ -1,28 +1,37 @@
 import {React, useState } from 'react';
 import {Route, Routes } from 'react-router-dom';
-import { NavBar, Feed, PinDetail, CreatePin, Search } from '../components'
+// import { NavBar, Feed, PinDetail, CreatePin, Search } from '../components';
+import Search from '../components/Search';
+import NavBar from '../components/NavBar';
+import Feed from '../components/Feed';
+import PinDetail from '../components/PinDetail';
+import CreatePin from '../components/CreatePin';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const Pins = ({user}) => {
   const [searchTerm, setSearchTerm] = useState('')
 
   return (
+
     <div className='px-2 md:px-5'>
       <div className='bg-gray-50'>
-        <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} user={user} />
+        <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} user={user && user} />
       </div>
 
       <div className='h-full'> 
         <Routes>
-          <Route path='/' element={<Feed />}></Route>
-          <Route path='/category/:categoryId' element={<Feed />}></Route>
-          <Route path='/pin-detail/:pinId' element={<PinDetail user={user} />}></Route>
-          <Route path='/createPin' element={<CreatePin user={user} />}></Route>
-          <Route path='/search' element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />}></Route>
+        <Route path='/' element={<Pins user={user && user} />} />
+          <Route path='/' element={<Feed />}/>
+          <Route path='/category/:categoryId' element={<Feed />}/>
+          <Route path='/pin-detail/:pinId' element={<PinDetail user={user && user} />}/>
+          <Route path='/createPin' element={<CreatePin user={user && user} />}/>
+          <Route path='/search' element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />}/>
         </Routes>
       </div>
 
       
     </div>
+
   )
 }
 

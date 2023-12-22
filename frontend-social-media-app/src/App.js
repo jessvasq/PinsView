@@ -5,6 +5,11 @@ import Home from './container/Home';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
+  const navigate = useNavigate();
+  const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+
+  
+
   return (
     <GoogleOAuthProvider clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}>
       <Routes>
