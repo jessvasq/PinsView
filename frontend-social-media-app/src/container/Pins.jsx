@@ -1,6 +1,5 @@
 import {React, useState } from 'react';
 import {Route, Routes } from 'react-router-dom';
-// import { NavBar, Feed, PinDetail, CreatePin, Search } from '../components';
 import Search from '../components/Search';
 import NavBar from '../components/NavBar';
 import Feed from '../components/Feed';
