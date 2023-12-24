@@ -7,8 +7,8 @@ export default {
     //array of objects
     //A schema is a blueprint for a document type
         {
-            name: 'username', 
-            title: 'Username',
+            name: 'userName', 
+            title: 'UserName',
             type: 'string',
         },
 

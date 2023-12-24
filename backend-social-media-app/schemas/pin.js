@@ -1,7 +1,7 @@
 export default {    
     name: 'pin',
-    type: 'document',
     title: 'Pin',
+    type: 'document',
     //fields represents the properties of the document type
     fields: [      
         {
