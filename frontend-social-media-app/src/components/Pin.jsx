@@ -1,9 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { urlFor } from '../utils/client';
+import { v4 as uuidv4 } from 'uuid';
+import {mdDownloadForOffline} from 'react-icons/md';
+import { AiTwotoneDelete } from 'react-icons/ai';
+import { BsFillArrowUpRightCircleFill } from 'react-icons/bs';
+import { client, urlFOr } from '../utils/client';
 
 const Pin = ({pin: {postedBy, image, _id, destination }}) => {
+  const [postHovered, setPostHovered] = useState(false);
+  const navigate = useNavigate();
+  const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+
   return (
-    <div>Pin
+    <div className='m-2'>
+    
+
+
+
+
+
+
+
+
+
         <img className="rounded-lg w-full " src={(urlFor(image).width(250).url())} alt="user-post" /> 
     </div>
   )
