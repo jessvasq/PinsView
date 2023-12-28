@@ -34,6 +34,15 @@ const Feed = () => {
       <Spinner message={`We are adding ${ideaName} ideas to your feed!`} />
     );
   }
+
+  if(!pins?.length) {
+    return (
+      <div className='flex flex-col items-center justify-center h-full mt-10'>
+        <h1 className='text-2xl font-bold mb-5 '>No ideas found</h1>
+        <p className='text-xl mb-5'>Try searching for something else</p>
+      </div>
+    )
+  }
   return (
     <div>
       {pins && (
