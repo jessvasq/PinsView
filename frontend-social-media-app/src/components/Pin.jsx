@@ -15,7 +15,7 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
   const navigate = useNavigate();
   const user = fetchUser();
   // !! is used to convert the value to a boolean
-  const alreadySaved = !!(save?.filter((item)=> item.postedBy._id === user.googleId))?.length;
+  const alreadySaved = !!(save?.filter((item)=> item.postedBy?._id === user.sub ))?.length;
   
   //savePin is used to save a pin
   const savePin = (id) => {
@@ -32,10 +32,10 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
         .insert('after', 'save[-1]', [
           {
             _key: uuidv4(),
-            userId: user?.googleId,
+            userId: user?.sub,
             postedBy: {
               _type: 'postedBy',
-              _ref: user?.googleId,
+              _ref: user?.sub,
             }
 
           }])
@@ -118,7 +118,7 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
 
                 
                 {/*if the user is the same as the user who posted the pin, display the delete button */}
-                {postedBy?._id === user?.googleId && (
+                {postedBy?._id === user?.sub && (
                   <button
                     onClick={(e) => {
                       //stopPropagation is used to prevent the user from being redirected to another page

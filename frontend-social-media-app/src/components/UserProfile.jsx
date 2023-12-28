@@ -74,12 +74,14 @@ const UserProfile = () => {
             {user.userName}
           </h1>
           <div className="absolute top-0 z-1 right-0 p-2">
-            {userId === User.googleId && (
+            {/* if the user id is equal to the user id of the logged in user, display the logout button */}
+            {userId === User.sub && (
          
              <button type='button' className='bg-white p-2 rounded-full cursor-pointer outline-none shadow-md' onClick={logout}>
-              <AiOutlineLogout fontSize={30}  />LOGOUT 
+              <AiOutlineLogout fontSize={25} color='red'/>
              </button>
-            )}
+            )
+          }
       
           </div>
         </div>

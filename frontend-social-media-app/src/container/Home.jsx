@@ -16,9 +16,9 @@ const Home = () => {
   const scrollRef = useRef(null);
   const userInfo = fetchUser();
 
-
+  //useEffect is used to perform an action after the component is rendered
   useEffect(() => {
-    const query = userQuery(userInfo?.googleId);
+    const query = userQuery(userInfo?.sub);
 
     client.fetch(query).then((data) => {
       setUser(data[0]);
