@@ -18,24 +18,24 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
   const alreadySaved = !!(save?.filter((item)=> item.postedBy._id === user.googleId))?.length;
   
   //savePin is used to save a pin
-  const savePin = (_id) => {
+  const savePin = (id) => {
     //if the value has not been saved, save it
     if (!alreadySaved) {
       // setSavingPost(true);
     
       client
         //patch is used to update the value 
-        .patch(_id)
+        .patch(id)
         //setIfMissing is used to set the value if it is missing
         .setIfMissing({ save: [] })
         //insert is used to insert a value into an array 
         .insert('after', 'save[-1]', [
           {
             _key: uuidv4(),
-            userId: user.googleId,
+            userId: user?.googleId,
             postedBy: {
               _type: 'postedBy',
-              _ref: user.googleId,
+              _ref: user?.googleId,
             }
 
           }])
@@ -53,10 +53,10 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
   }
 
   //deletePin is used to delete a pin
-  const deletePin = (_id) => {
+  const deletePin = (id) => {
     client
     //deletes the pin
-      .delete(_id)
+      .delete(id)
       //commit the changes to the database
       .commit()
       //reload the page once the commit is done
