@@ -14,7 +14,12 @@ A social media application created to facilitate the sharing, archiving, and exp
 ![Screenshot from 2023-12-28 15-16-01](https://github.com/jessvasq/PinsView/assets/119137671/299fec34-962d-4d08-a6fc-0d5e9d868cc6)
 
 ### Desktop View ###
-![Screenshot from 2023-12-28 15-16-49](https://github.com/jessvasq/PinsView/assets/119137671/39818483-7506-41af-9582-955ccf81331c)
+##### Home Page #####
+![Screenshot from 2023-12-28 13-52-03](https://github.com/jessvasq/PinsView/assets/119137671/f5669fb9-e07e-4cf2-b9f4-ceb1c5d43120)
+##### Search & Create Pin #####
+![Screenshot from 2023-12-28 16-08-16](https://github.com/jessvasq/PinsView/assets/119137671/3b491c30-87c8-40db-b956-19f2e63ec75f)
+##### User Profile Page #####
+![Screenshot from 2023-12-28 13-54-47](https://github.com/jessvasq/PinsView/assets/119137671/5528535b-dafc-42cf-80f8-07f8c31bacff)
 
 ##### Credits #####
 ###### JavaScript Mastery ######
