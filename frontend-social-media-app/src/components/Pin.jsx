@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {MdDownloadForOffline} from 'react-icons/md';
 import { AiTwotoneDelete } from 'react-icons/ai';
 import { BsFillArrowUpRightCircleFill } from 'react-icons/bs';
-import { client, urlFOr } from '../utils/client';
+import { client } from '../utils/client';
 import fetchUser from '../utils/fetchUser';
 
 const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {

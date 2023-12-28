@@ -7,7 +7,7 @@ import UserProfile from '../components/UserProfile';
 import { userQuery } from '../utils/data';
 import { client } from '../utils/client';
 import Pins from './Pins';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo1.png';
 import fetchUser from '../utils/fetchUser';
 
 const Home = () => {
