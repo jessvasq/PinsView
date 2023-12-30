@@ -10,7 +10,7 @@ import fetchUser from '../utils/fetchUser';
 
 const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
   const [postHovered, setPostHovered] = useState(false);
-  // const [savingPost, setSavingPost] = useState(false);
+
   //navigate is used to navigate to a different page
   const navigate = useNavigate();
   const user = fetchUser();
@@ -46,7 +46,6 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
           //reload is used to reload the page once the commit is done
           window.location.reload();
           // //setSavingPost is used to set the value of savingPost to false which will stop the loading animation
-          // setSavingPost(false);
         })
     }
 
@@ -70,7 +69,6 @@ const Pin = ({pin: {postedBy, image, _id, destination, save }}) => {
         <div className='relative cursor-zoom-in w-auto hover:shadow-lg rounded-lg overflow-hidden transition-all duration-500 ease-in-out'
           onMouseEnter={()=> setPostHovered(true)}
           onMouseLeave={()=> setPostHovered(false)}
-          // onClick={()=> navigate(`/pin-detail/${_id}`)} redirects the user to the pin detail page
           onClick={()=> navigate(`/pin-detail/${_id}`)}>
 
           <img className="rounded-lg w-full " src={(urlFor(image).width(250).url())} alt="user-post" /> 

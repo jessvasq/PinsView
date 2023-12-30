@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar';
 import Feed from '../components/Feed';
 import PinDetail from '../components/PinDetail';
 import CreatePin from '../components/CreatePin';
-import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const Pins = ({ user }) => {
   const [searchTerm, setSearchTerm] = useState('')
