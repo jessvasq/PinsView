@@ -2,6 +2,8 @@
 ## ABOUT ##
 
 A social media application created to facilitate the sharing, archiving, and exploration of content such as recipes, home decor, fashion, motivation, and inspiration online. Users can utilize images organized in the format of pinboards.
+### DEMO LINK ###
+https://pinsview.netlify.app
 
 ## TECHNOLOGIES USED ##
 * <img src='https://github.com/jessvasq/PinsView/assets/119137671/f0848d9a-fa63-44b1-9ed6-8c8d6f33d3a9' width=40px height=40px> 
