@@ -1,7 +1,7 @@
 # PINSVIEW #
 ## ABOUT ##
 
-A social media application created to facilitate the sharing, archiving, and exploration of content such as recipes, home decor, fashion, motivation, and inspiration online. Users can utilize images organized in the format of pinboards.
+A social media application created to facilitate the sharing, archiving, and exploration of content such as travel, home decor, art, and inspiration online. Users can utilize images organized in the format of pinboards.
 ### DEMO LINK ###
 https://pinsview.netlify.app
 
